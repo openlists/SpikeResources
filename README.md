@@ -103,12 +103,18 @@ The following are tools & utitilies for simulations of spiking data:
 The following are dedicated tutorials for single-cell analyses:
 - A [place cell tutorial](https://github.com/PeyracheLab/Tutorial_HDPlaceCells_Analysis)
 
+The following are collection of metrics for particular analyses:
+- A [collection of grid scores](https://github.com/klaragerlei/grid_score) for grid cell analysis
+
 The following are code repositories for individual analyses / projects / papers:
 - [Replay trajectory classification](https://github.com/Eden-Kramer-Lab/replay_trajectory_classification) code
 - Code for [ictal recruitment](https://github.com/edmerix/Merricks-et-al-JNeurosci-2021) in human single-unit activity
 - Matlab [code](https://github.com/NeuroLuke/KunzNeuron2021) for a project on egocentric boundary cells
 
 The following are collections of code available from particular labs:
-- A [collection of code](https://github.com/buzsakilab/buzcode) (Matlab) from the [Buzsaki lab](https://buzsakilab.com/)
+- [Code repositories](https://github.com/buzsakilab) (Matlab) from the [Buzsaki lab](https://buzsakilab.com/)
+    - Includes the ['buzcode'](https://github.com/buzsakilab/buzcode) collection of analysis code
 - [Code repositories](https://github.com/GiocomoLab) (mostly Matlab) from the [Giocomo Lab](https://giocomolab.weebly.com/)
-- [Code repositories](https://github.com/LorenFrankLab) from the [Frank Lab](https://franklab.ucsf.edu/)
+- [Code repositories](https://github.com/LorenFrankLab) (mostly Python) from the [Frank Lab](https://franklab.ucsf.edu/)
+- [Code repositories](https://github.com/MattNolanLab/) (mostly Python) from the [Nolan Lab](https://nolanlab.mvm.ed.ac.uk/)
+    - Includes analysis code for [spatial ephys analysis](https://github.com/MattNolanLab/SpatialEphysAnalysis)
