@@ -1,6 +1,8 @@
 # SpikeResources
 
-This is a collection of tooling and resources for spikes - including spike sorting and analyses of single- and multi-unit data.
+This is a collection of tools & resources related to 'spikes' in neuroscience (action potentials recorded from individual neurons).
+
+This list covers single-unit and multi-unit data, including data management, spike sorting, and available tools and analyses. 
 
 To contribute a new link to a tool or resource, open an issue mentioning it, or a pull request with a link.
 
@@ -15,7 +17,7 @@ Note that single-unit datasets are listed in the
 
 ## Data Management
 
-Single neuron data is recorded with multiple different amplifiers and recording systems from different companinies, often with different proprietary file formats. This section collects tools and resources related to data management for neural recordings and single-unit data. 
+Single-unit data can be recorded with various different amplifiers and recording systems from different companies, often with different proprietary file formats. This section collects tools and resources related to data management for neural recordings of single- an multi-unit data. 
 
 ### Neurodata Without Borders
 
@@ -34,53 +36,60 @@ Other tools related to data management for single-unit data include:
 
 ## Spike Sorting
 
-[Spike sorting](http://www.scholarpedia.org/article/Spike_sorting) is the process of the grouping spikes into clusters, that relate to putative individual neurons, for which there have been many proposed algorithms. The following resources relate specifically to spike sorting.
+[Spike sorting](http://www.scholarpedia.org/article/Spike_sorting) is the process of the grouping spikes into clusters, that relate to putative individual neurons. There have been many proposed algorithms for spike sorting. This section lists tools and resources related to spike sorting.
 
 ### Tutorials
 
 Spike sorting tutorials:
 - A [brief overview](https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/image-and-signal-processing/spikeforest/) of spike sorting from the Simons Foundation
+- A [collection of tutorials](https://github.com/SpikeInterface/spiketutorials) from Spike Interface
 - A [tutorial](https://www.cambridgeneurotech.com/webinars/spike-sorting) from cambridge neurotech
 - A [tutorial](https://cbmm.mit.edu/learning-hub/tutorials/computational-tutorial/introduction-spike-sorting) from CBBM
-- A [collection of tutorials](https://github.com/SpikeInterface/spiketutorials) from Spike Interface
+- A [brief lesson on spike sorting](https://github.com/BIPN145/SpikeSorting) from a class
+- A [brief, standalone tutorial](https://github.com/michnard/SpikeSortingTutorial) on spike sorting 
 
 ### Spike Interface
 
-[SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/) is a collection of Python modules relating to spike sorting and associated processes.
+[SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/) is a Python module for performing spike sorting and associated processes.
 
-The SpikeInterface ecosystem includes multiple related tool, including:
-- [spikeextractors](https://github.com/SpikeInterface/spikeextractors) provides interfaces for data files
-- [spiketoolkit](https://github.com/SpikeInterface/spiketoolkit) provides modules pre- & post-processing related to spike sorting
-- [spikesorters](https://github.com/SpikeInterface/spikesorters) provides an interface for running supported spike sorters
-- [spikecomparison](https://github.com/SpikeInterface/spikecomparison) provides tools for comparing and benchmarking sorting outputs
-- [spikewidgets](https://github.com/SpikeInterface/spikewidgets) provides widgets for visualizations
-- [spikemetrics](https://github.com/SpikeInterface/spikemetrics) provides metrics for spike sorting quality control
-
-SpikeInterface includes the access to multiple algorithms that can be used through the tool, including this
+SpikeInterface can be used to run multiple available spike-sorting algorithms, including this
 [list of spike sorters](https://spikeinterface.readthedocs.io/en/latest/install_sorters.html).
+
+SpikeInterface includes multiple sub-modules, including:
+- `comparison` for comparing and benchmarking sorting outputs
+- `extractors` for interfacing with data files
+- `toolkit` for pre- & post-processing related to spike sorting
+- `sorters` for running supported spike sorters
+- `widgets` for using widgets for visualizations
 
 ### Spike Sorters
 
-Spike sorters that can be used on microwires, such as in human single-neuron data:
-- [waveclus](https://github.com/csn-le/wave_clus)
-- [combinato](https://github.com/jniediek/combinato)
-- [klusta](https://github.com/kwikteam/klusta)
-- [OSort](https://www.urut.ch/new/serendipity/index.php?/pages/osort.html)
-- [tridesclous](https://github.com/tridesclous/tridesclous)
+Spike sorters that can be used on single-channel / microwire recordings, such as in human data:
+- [combinato](https://github.com/jniediek/combinato), in Python
+- [klusta](https://github.com/kwikteam/klusta), in Python
+- [tridesclous](https://github.com/tridesclous/tridesclous), in Python
+- [waveclus](https://github.com/csn-le/wave_clus), in Matlab
+- [OSort](https://www.urut.ch/new/serendipity/index.php?/pages/osort.html), in Matlab
+- [HDsort](https://git.bsse.ethz.ch/hima_public/HDsort), in Matlab
+- [MountainSort](https://github.com/flatironinstitute/mountainsort), in C++
 
-Spike sorters that can be used on high density recordings, such as in animal recordings:
-- [kilosort2](https://github.com/MouseLand/Kilosort)
+Spike sorters that can be used on multi-channel / high density recordings, such as in animal data:
+- [HerdingSpikes2](https://github.com/mhhennig/hs2), in Python
+- [YASS](https://github.com/paninski-lab/yass), in Python
+- [SpykingCircus](https://github.com/spyking-circus/spyking-circus), in Python
+- [kilosort3](https://github.com/MouseLand/Kilosort), in Matlab
+- [IronClust](https://github.com/flatironinstitute/ironclust), in Matlab
 
 ### Comparisons & Quality Control
 
 Spike sorting solutions can vary, and in general requires quality control procedures to ensure that sorting solution are robust and adequately reflect isolated units. Different spike sorters can give different solutions, and it may be useful to compare different spike sorters to each other. 
 
-The following are systematic comparisons of different spike sorters:
-- [SpikeForrest](https://spikeforest.flatironinstitute.org/) is a project that systematically compares multiple spike sorting algorithms.
-
 The following are guides to quality control for spike sorting:
 - A [quality metrics guide](https://allensdk.readthedocs.io/en/latest/_static/examples/nb/ecephys_quality_metrics.html) from the Allen institute
 - Notes on [spike sorting metrics](https://edmerix.github.io/SpikeSorting/) from [Ed Merricks](https://edmerix.github.io/)
+
+The following are systematic comparisons of different spike sorters:
+- [SpikeForrest](https://spikeforest.flatironinstitute.org/) is a project that systematically compares multiple spike sorting algorithms.
 
 ## Spike Analyses
 
@@ -95,7 +104,7 @@ General Tools:
 
 ### Simulations
 
-The following are tools & utitilies for simulations of spiking data:
+The following are tools and utilities for simulating spiking data:
 - [MEArec](https://github.com/alejoe91/MEArec) Python toolbox for simulating extra-cellular recordings on multi-unit arrays
 
 ### Individual Analyses
@@ -103,7 +112,7 @@ The following are tools & utitilies for simulations of spiking data:
 The following are dedicated tutorials for single-cell analyses:
 - A [place cell tutorial](https://github.com/PeyracheLab/Tutorial_HDPlaceCells_Analysis)
 
-The following are collection of metrics for particular analyses:
+The following are tools and resources for particular analyses:
 - A [collection of grid scores](https://github.com/klaragerlei/grid_score) for grid cell analysis
 
 The following are code repositories for individual analyses / projects / papers:
@@ -111,7 +120,7 @@ The following are code repositories for individual analyses / projects / papers:
 - Code for [ictal recruitment](https://github.com/edmerix/Merricks-et-al-JNeurosci-2021) in human single-unit activity
 - Matlab [code](https://github.com/NeuroLuke/KunzNeuron2021) for a project on egocentric boundary cells
 
-The following are collections of code available from particular labs:
+The following are collections of available code from individual labs:
 - [Code repositories](https://github.com/buzsakilab) (Matlab) from the [Buzsaki lab](https://buzsakilab.com/)
     - Includes the ['buzcode'](https://github.com/buzsakilab/buzcode) collection of analysis code
 - [Code repositories](https://github.com/GiocomoLab) (mostly Matlab) from the [Giocomo Lab](https://giocomolab.weebly.com/)
