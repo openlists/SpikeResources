@@ -11,13 +11,31 @@ Note that single-unit datasets are listed in the
 
 ## Table of Contents
 
+- [Data Recording](#data-recording)
 - [Data Management](#data-management)
 - [Spike Sorting](#spike-sorting)
 - [Spike Analyses](#spike-analyses)
 
+## Data Recording
+
+Single-unit data can be recorded with various different amplifiers and recording systems from different companies. 
+
+This section lists companies that make recording systems for single-unit recordings.
+
+### Recording Systems
+
+- [BlackRock](https://blackrockneurotech.com/)
+- [NeuraLynx](https://neuralynx.com/)
+- [Ripple](https://rippleneuro.com/)
+- [SpikeGadgets](https://spikegadgets.com/)
+- [Intan](https://intantech.com/)
+- [Open Ephys](https://open-ephys.org/)
+
 ## Data Management
 
-Single-unit data can be recorded with various different amplifiers and recording systems from different companies, often with different proprietary file formats. This section collects tools and resources related to data management for neural recordings of single- an multi-unit data. 
+Data from different recording system are often stored in proprietary file formats. 
+
+This section collects tools and resources related to data management for neural recordings of single- an multi-unit data. 
 
 ### Neurodata Without Borders
 
@@ -101,11 +119,15 @@ General Tools:
 - [Spykes](https://github.com/KordingLab/spykes) is a Python toolbox for spike data analysis & visualizations
 - [elephant](https://github.com/NeuralEnsemble/elephant), which uses [neo](https://github.com/NeuralEnsemble/python-neo)
 - [Phy](https://phy.readthedocs.io/en/latest/) is a Python tool providing a graphical interface for visualization and manual curation of large-scale electrophysiology data
+- [Brainstorm](https://neuroimage.usc.edu/brainstorm/), a general purpose, Matlab toolbox, has tools for processing 
+[ephys data](https://neuroimage.usc.edu/brainstorm/e-phys/Introduction)
 
 ### Simulations
 
 The following are tools and utilities for simulating spiking data:
-- [MEArec](https://github.com/alejoe91/MEArec) Python toolbox for simulating extra-cellular recordings on multi-unit arrays
+- [MEArec](https://github.com/alejoe91/MEArec), a Python toolbox for simulating extra-cellular recordings on multi-unit arrays
+- [PyRates](https://github.com/pyrates-neuroscience/PyRates), a Python framework for rate-based neural simulations
+- [Brian2](https://brian2.readthedocs.io/en/stable/), a Python toolbox for simulating spiking neural networks
 
 ### Individual Analyses
 
