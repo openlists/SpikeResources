@@ -39,13 +39,20 @@ This section collects tools and resources related to data management for neural 
 
 ### Neurodata Without Borders
 
-[NWB](https://www.nwb.org/) is a standardized data schema that can be used to store single-unit data. 
+[NWB](https://www.nwb.org/) is a standardized data schema that can be used to store single-unit data.
 
-Within the NWB ecosystem, there are the following associated tools:
-- [pynwb](https://github.com/NeurodataWithoutBorders/pynwb), a Python interface for NWB files
-- [matNWB](https://github.com/NeurodataWithoutBorders/matnwb), a Matlab interface for NWB files
-- [NWB conversion tools](https://github.com/catalystneuro/nwb-conversion-tools) for converting and combining data from proprietary formats
-- [NWB widgets](https://github.com/NeurodataWithoutBorders/nwb-jupyter-widgets) for visualizing data in NWB files
+NWB includes a broad ecosystem of related tools for working with NWB files, as described on the 
+[NWB overview](https://nwb-overview.readthedocs.io) page.
+
+This ecosystem includes the following tools developed by NWB:
+- [PyNWB](https://github.com/NeurodataWithoutBorders/pynwb), a Python interface for NWB files
+- [MatNWB](https://github.com/NeurodataWithoutBorders/matnwb), a Matlab interface for NWB files
+- [NWBinspector](https://github.com/NeurodataWithoutBorders/nwbinspector) for inspecting NWB files for compliance
+- [NWBwidgets](https://github.com/NeurodataWithoutBorders/nwbwidgets) for interactive visualizations of NWB files in notebooks
+
+In addition, there are other available tools related to NWB, including:
+- [neuroconv](https://github.com/catalystneuro/neuroconv), which provides tools for converting and combining data into NWB
+- [CellExplorer](https://cellexplorer.org/), which is a Matlab tool providing a GUI for exploring and classifying single cells
 
 ### Other Data Management Tools
 
@@ -116,8 +123,11 @@ The following collects tools and resources for analyzing (sorted) single neuron 
 ### General Toolboxes
 
 General Tools:
+
+- [spiketools](https://github.com/spiketools/spiketools) is a Python package for analyzing spike data
+- [pynapple](https://github.com/PeyracheLab/pynapple), the PYthon Neural Analysis Package, has some tools for working with spike data
 - [Spykes](https://github.com/KordingLab/spykes) is a Python toolbox for spike data analysis & visualizations
-- [elephant](https://github.com/NeuralEnsemble/elephant), which uses [neo](https://github.com/NeuralEnsemble/python-neo)
+- [elephant](https://github.com/NeuralEnsemble/elephant), the electrophysiology analysis toolkit, which uses [neo](https://github.com/NeuralEnsemble/python-neo)
 - [Phy](https://phy.readthedocs.io/en/latest/) is a Python tool providing a graphical interface for visualization and manual curation of large-scale electrophysiology data
 - [Brainstorm](https://neuroimage.usc.edu/brainstorm/), a general purpose, Matlab toolbox, has tools for processing 
 [ephys data](https://neuroimage.usc.edu/brainstorm/e-phys/Introduction)
